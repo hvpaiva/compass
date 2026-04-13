@@ -73,6 +73,10 @@ Read that file now and follow its instructions completely.
 
 ## Producing FRAMING.md
 
+Read `language.docs` from `.compass/config.yaml`. Write FRAMING.md in that language.
+If not set, default to English. File names and section headings from templates remain
+in English.
+
 Once the user approves the framing, write `.compass/FRAMING.md` using the template
 at `~/.claude/compass/templates/FRAMING.md`.
 

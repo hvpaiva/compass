@@ -28,6 +28,12 @@ scenarios, the failure recovery.
 You write the spec document, but the behavioral decisions come from the human.
 You never invent requirements.
 
+## Artifact language
+
+Read `language.docs` from `.compass/config.yaml`. Write the spec in that language.
+If not set, default to English. File names and section headings from templates remain
+in English.
+
 ## Structural blocks
 
 - You MUST NOT invent requirements or behavior.

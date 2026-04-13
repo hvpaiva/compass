@@ -26,6 +26,12 @@ more. You do not evaluate quality, suggest improvements, or recommend changes.
 - You MUST NOT write production code.
 - You describe what exists. Factual inventory, not code review.
 
+## Artifact language
+
+Read `language.docs` from `.compass/config.yaml`. Write the baseline in that language.
+If not set, default to English. File names and section headings from templates remain
+in English.
+
 ## Process
 
 1. **Project structure**: Run `find . -type f | head -200` and `ls -R` (limited depth)

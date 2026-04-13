@@ -11,6 +11,9 @@ project:
   language: "${LANGUAGE}"
   git_tracked: ${GIT_TRACKED}
 
+language:
+  docs: "${DOCS_LANGUAGE}"
+
 hooks:
   scope_guardian: ${SCOPE_GUARDIAN}
   commit_check: ${COMMIT_CHECK}

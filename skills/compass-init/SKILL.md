@@ -63,7 +63,19 @@ question: "Primary project language?"
 options: [detected language first, then: "Rust", "Go", "Python", "TypeScript", "Shell"]
 ```
 
-### Question 2 — ADR location
+### Question 2 — Document language
+
+```
+header: "Docs lang"
+question: "What language should COMPASS artifacts be written in?"
+options: [
+  "English (Recommended)",
+  "Português brasileiro",
+  "Español"
+]
+```
+
+### Question 3 — ADR location
 
 ```
 header: "ADRs"
@@ -71,7 +83,7 @@ question: "Where should Architectural Decision Records be stored?"
 options: [".compass/ADR/", "docs/adrs/", "docs/decisions/"]
 ```
 
-### Question 3 — Spec location
+### Question 4 — Spec location
 
 ```
 header: "Spec"
@@ -79,7 +91,7 @@ question: "Where should the specification document live?"
 options: [".compass/SPEC.md", "docs/spec.md"]
 ```
 
-### Question 4 — Socratic intensity
+### Question 5 — Socratic intensity
 
 ```
 header: "Style"
@@ -91,7 +103,7 @@ options: [
 ]
 ```
 
-### Question 5 — Scope guardian
+### Question 6 — Scope guardian
 
 ```
 header: "Guardian"
@@ -99,7 +111,7 @@ question: "Enable automatic scope guardian during build phase?"
 options: ["Yes — detect drift automatically on every file edit", "No — I will invoke it manually"]
 ```
 
-### Question 6 — Conventional commits
+### Question 7 — Conventional commits
 
 ```
 header: "Commits"
@@ -107,7 +119,7 @@ question: "Validate conventional commit format?"
 options: ["Yes — block non-conventional commits", "No — do not enforce"]
 ```
 
-### Question 7 — Git tracking
+### Question 8 — Git tracking
 
 ```
 header: "Git"

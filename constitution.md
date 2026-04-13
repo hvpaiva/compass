@@ -165,7 +165,22 @@ not by LLM reasoning.
 
 ---
 
-## Article 10 — Six Phases
+## Article 10 — Document Language
+
+All COMPASS artifacts (FRAMING.md, dossiers, ARCHITECTURE.md, ADRs, SPEC.md, unit
+files, SESSION.md) must be written in the language configured in `language.docs`
+from `config.yaml`.
+
+- If `language.docs` is not set, default to English (`en`).
+- File names, phase names, commands, and code identifiers remain in English regardless
+  of the configured language.
+- Conversation language is independent — it follows the user's CLAUDE.md or session
+  context, not this setting.
+- Sub-agents must read `language.docs` from config before producing any artifact.
+
+---
+
+## Article 11 — Six Phases
 
 The COMPASS workflow has six phases, executed in order:
 
