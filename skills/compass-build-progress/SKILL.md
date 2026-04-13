@@ -20,7 +20,7 @@ definition at `~/.claude/compass/agents/completion-tracker.md`.
 
 ### Process
 
-1. Run `compass-tools.sh progress` to get structured progress data.
+1. Run `~/.claude/compass/scripts/compass-tools.sh progress` to get structured progress data.
 2. Read all unit files from `.compass/UNITS/` for details.
 3. Present a visual summary:
 
@@ -52,4 +52,4 @@ Next available units (no unmet dependencies): unit-006
 
 ## No artifacts produced
 
-This is a read-only status view. Run `compass-tools.sh session update` after.
+This is a read-only status view. Run `~/.claude/compass/scripts/compass-tools.sh session update` after.

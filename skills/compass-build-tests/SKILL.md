@@ -54,4 +54,4 @@ Agent(
 ## Post-execution
 
 Present the audit findings. No artifacts produced — conversational feedback.
-Run `compass-tools.sh session update`.
+Run `~/.claude/compass/scripts/compass-tools.sh session update`.

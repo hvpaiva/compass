@@ -50,4 +50,4 @@ If they mention a specific unit, read that unit file for context.
 ### Ending the session
 
 The human ends the session when they're ready. There is no artifact produced.
-Run `compass-tools.sh session update` to note the duck session in SESSION.md.
+Run `~/.claude/compass/scripts/compass-tools.sh session update` to note the duck session in SESSION.md.

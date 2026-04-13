@@ -93,7 +93,7 @@ All project state lives in files under `.compass/` in the target project.
 - Every decision, artifact, and progress marker must be persisted to a file.
 - State files are the authoritative record. If conversation context and files
   disagree, the files are correct.
-- State mutations go through `compass-tools.sh` — sub-agents must not directly
+- State mutations go through `~/.claude/compass/scripts/compass-tools.sh` — sub-agents must not directly
   edit `SESSION.md`, `config.yaml`, or progress markers.
 
 ---
@@ -106,7 +106,7 @@ Each sub-agent invocation is stateless. It loads only the files it needs via exp
 - Sub-agents must not assume prior conversation context.
 - Sub-agents must not assume other sub-agents have run unless their artifacts exist
   in `.compass/`.
-- The pre-flight check (`compass-tools.sh preflight`) is the authoritative source
+- The pre-flight check (`~/.claude/compass/scripts/compass-tools.sh preflight`) is the authoritative source
   for whether prerequisites are met.
 
 ---
@@ -130,7 +130,7 @@ Nothing advances without the human saying so.
 ADRs are mandatory for non-trivial architectural decisions.
 
 - Format: MADR (Markdown Any Decision Records).
-- Each ADR lives in its own file, numbered sequentially by `compass-tools.sh adr next-number`.
+- Each ADR lives in its own file, numbered sequentially by `~/.claude/compass/scripts/compass-tools.sh adr next-number`.
 - ADRs are linked to requirements in FRAMING.md and, later, to code locations.
 - The scope-guardian checks diffs against active ADRs for contradictions.
 - ADR location is configurable via `config.yaml` (default: `.compass/ADR/`).
@@ -159,7 +159,7 @@ File existence checks, phase numbering, progress tracking, drift detection setup
 ADR numbering, and session state updates are handled by deterministic scripts —
 not by LLM reasoning.
 
-- `compass-tools.sh` is the canonical tool for all bookkeeping operations.
+- `~/.claude/compass/scripts/compass-tools.sh` is the canonical tool for all bookkeeping operations.
 - Sub-agents call the script for state queries and mutations.
 - The script's output is authoritative over any LLM inference about state.
 

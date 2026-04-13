@@ -10,7 +10,7 @@ where they are and what the logical next step is.
 
 ## Execution
 
-1. Run `compass-tools.sh status --json` to get full project state.
+1. Run `~/.claude/compass/scripts/compass-tools.sh status --json` to get full project state.
 2. If the command fails (no `.compass/` found), suggest: "No COMPASS project
    found. Run `/compass:init` to get started."
 
@@ -55,6 +55,6 @@ where they are and what the logical next step is.
 ## Design notes
 
 - This command must be FAST. Minimal reading, no spawning, no heavy analysis.
-- It reads state from files and `compass-tools.sh` — never from conversation memory.
+- It reads state from files and `~/.claude/compass/scripts/compass-tools.sh` — never from conversation memory.
 - It works perfectly after a `/clear` because it depends only on `.compass/` files.
-- Run `compass-tools.sh session update` is NOT called — this is read-only.
+- Run `~/.claude/compass/scripts/compass-tools.sh session update` is NOT called — this is read-only.

@@ -13,14 +13,18 @@ one dossier in `.compass/RESEARCH/`.
 
 ## Pre-flight
 
-1. Run `compass-tools.sh preflight research` to verify:
+1. Run `~/.claude/compass/scripts/compass-tools.sh preflight research` to verify:
    - `.compass/FRAMING.md` exists (if not, suggest `/compass:frame` first)
-2. If no `$ARGUMENTS` (topic) provided, ask the user:
+2. If no `$ARGUMENTS` (topic) provided, use AskUserQuestion with **multiSelect: true**
+   to let the user pick one or more topics at once:
    ```
-   header: "Topic"
-   question: "What topic should I research?"
-   options: [suggest topics derived from FRAMING.md gaps and risks, if identifiable]
+   header: "Topics"
+   question: "Which topics do you want to research?"
+   multiSelect: true
+   options: [derive 2-4 topics from FRAMING.md gaps, risks, and unknowns]
    ```
+   The user can also type a custom topic via the "Other" option.
+   Run one research agent per selected topic (in parallel when possible).
 
 ## Required reading
 
@@ -34,7 +38,11 @@ Load before proceeding:
 
 ## Execution
 
-Spawn the `domain-researcher` agent for the actual research work:
+For **each** selected topic, spawn a `domain-researcher` agent. When there are multiple
+topics, launch all agents **in parallel** (one Agent tool call per topic in the same message).
+
+Pre-assign dossier numbers sequentially before spawning (e.g., if the next number is 003
+and the user picked 3 topics, assign 003, 004, 005) to avoid race conditions.
 
 ```
 Agent(
@@ -55,7 +63,7 @@ Agent(
     Project context: [summarize FRAMING.md key points — mission, scope, constraints]
 
     Produce a research dossier at: .compass/RESEARCH/dossier-{NNN}-{slug}.md
-    where {NNN} is the next dossier number (check existing files in .compass/RESEARCH/).
+    (your assigned number is {NNN} — do not change it).
 
     Use the template at ~/.claude/compass/templates/RESEARCH-DOSSIER.md for structure.
 
@@ -65,17 +73,11 @@ Agent(
 
 ## Post-execution
 
-1. Read the produced dossier and present a summary to the user.
-2. Run `compass-tools.sh session update` to record progress.
-3. Ask the user:
-   ```
-   header: "Research"
-   question: "What next?"
-   options: [
-     "Research another topic",
-     "Review/revise this dossier",
-     "Move to architecture — /compass:architect",
-     "Check status — /compass:status"
-   ]
-   ```
+1. Read all produced dossiers and present a summary of each to the user.
+2. Run `~/.claude/compass/scripts/compass-tools.sh session update` to record progress.
+3. Ask the user what to do next (as a regular text message, not AskUserQuestion):
+   - Research another topic
+   - Review/revise a dossier
+   - Move to architecture — `/compass:architect`
+   - Check status — `/compass:status`
 4. Suggest `/clear` before starting a new phase.

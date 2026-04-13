@@ -12,7 +12,7 @@ without writing or suggesting specific code.
 
 ## Pre-flight
 
-1. Read `compass-tools.sh config get project.language` to know the target language.
+1. Read `~/.claude/compass/scripts/compass-tools.sh config get project.language` to know the target language.
 2. If `$ARGUMENTS` provided, use as target path. Otherwise, ask:
    ```
    header: "Target"
@@ -54,4 +54,4 @@ Agent(
 ## Post-execution
 
 Present findings to the user. No artifacts produced — this is conversational
-feedback. Run `compass-tools.sh session update`.
+feedback. Run `~/.claude/compass/scripts/compass-tools.sh session update`.

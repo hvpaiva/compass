@@ -11,7 +11,7 @@ document the result.
 
 ## Pre-flight
 
-1. Run `compass-tools.sh preflight architect` to verify:
+1. Run `~/.claude/compass/scripts/compass-tools.sh preflight architect` to verify:
    - `.compass/FRAMING.md` exists
    - `.compass/RESEARCH/` has at least one dossier
    - If prerequisites missing, inform the user which phases to complete first.
@@ -82,7 +82,7 @@ Present the document to the user for review before finalizing.
 
 ## Closing
 
-1. Run `compass-tools.sh session update` to record progress.
+1. Run `~/.claude/compass/scripts/compass-tools.sh session update` to record progress.
 2. Show summary of what was documented.
 3. Note any decisions that surfaced during the architecture session that should
    become formal ADRs.

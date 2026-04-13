@@ -11,12 +11,12 @@ invariants, boundary conditions.
 
 ## Pre-flight
 
-1. Run `compass-tools.sh preflight spec` to verify:
+1. Run `~/.claude/compass/scripts/compass-tools.sh preflight spec` to verify:
    - `.compass/FRAMING.md` exists
    - `.compass/ARCHITECTURE.md` exists
    - At least one ADR exists in the configured ADR directory
    - If prerequisites missing, inform the user which phases to complete first.
-2. Read `compass-tools.sh config get paths.spec` to resolve spec output path.
+2. Read `~/.claude/compass/scripts/compass-tools.sh config get paths.spec` to resolve spec output path.
 3. Check if spec file already exists.
    - If yes: inform the user. Ask if they want to revise, extend, or start fresh.
 
@@ -107,7 +107,7 @@ spec is reviewed at the end before finalizing.
 
 ## Closing
 
-1. Run `compass-tools.sh session update` to record progress.
+1. Run `~/.claude/compass/scripts/compass-tools.sh session update` to record progress.
 2. Show summary: number of modules specified, total behaviors, total acceptance
    criteria.
 3. Suggest: "Specification complete. Next step: `/compass:build-units` to

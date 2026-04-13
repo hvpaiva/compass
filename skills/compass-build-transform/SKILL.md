@@ -60,4 +60,4 @@ to implement this yourself."
 
 ## Post-execution
 
-Run `compass-tools.sh session update` to note the transformation in SESSION.md.
+Run `~/.claude/compass/scripts/compass-tools.sh session update` to note the transformation in SESSION.md.

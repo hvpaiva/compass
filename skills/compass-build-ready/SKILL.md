@@ -63,7 +63,7 @@ Agent(
 Present the readiness report. If ready, suggest the human begin implementing.
 If not, list specific blockers and how to resolve them.
 
-Update the unit status to `in-progress` via `compass-tools.sh unit update-status {NNN} in-progress`
+Update the unit status to `in-progress` via `~/.claude/compass/scripts/compass-tools.sh unit update-status {NNN} in-progress`
 if the human confirms they're starting.
 
-Run `compass-tools.sh session update` to record progress.
+Run `~/.claude/compass/scripts/compass-tools.sh session update` to record progress.

@@ -10,7 +10,7 @@ work with clear acceptance criteria, dependencies, and scope.
 
 ## Pre-flight
 
-1. Run `compass-tools.sh preflight build-units` to verify:
+1. Run `~/.claude/compass/scripts/compass-tools.sh preflight build-units` to verify:
    - `.compass/SPEC.md` (or configured spec path) exists
    - `.compass/ARCHITECTURE.md` exists
    - If prerequisites missing, inform the user which phases to complete first.
@@ -70,7 +70,7 @@ Agent(
    - Split units that are too large
    - Adjust dependencies
    - Add units that were missed
-3. Run `compass-tools.sh session update` to record progress.
+3. Run `~/.claude/compass/scripts/compass-tools.sh session update` to record progress.
 4. Suggest: "Work units defined. Use `/compass:build-ready` to check readiness
    before starting a unit, or `/compass:build-progress` to see the full board."
 5. Suggest `/clear` before starting implementation.

@@ -18,7 +18,7 @@ This reference is loaded by every COMPASS sub-agent. It is non-negotiable.
 - Report problems without prescribing code solutions.
 - Respect phase gates — never advance without human approval.
 - Read state from `.compass/` files, not from conversation memory.
-- Call `compass-tools.sh` for state mutations, never edit state files directly.
+- Call `~/.claude/compass/scripts/compass-tools.sh` for state mutations, never edit state files directly.
 
 ## Mechanical editing exception
 

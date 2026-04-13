@@ -14,11 +14,11 @@ produces one ADR file.
 
 ## Pre-flight
 
-1. Run `compass-tools.sh preflight decide` to verify:
+1. Run `~/.claude/compass/scripts/compass-tools.sh preflight decide` to verify:
    - `.compass/FRAMING.md` exists
    - `.compass/ARCHITECTURE.md` exists (warn if missing but don't block — some
      decisions may precede full architecture)
-2. Read `compass-tools.sh config get paths.adr` to resolve ADR output directory.
+2. Read `~/.claude/compass/scripts/compass-tools.sh config get paths.adr` to resolve ADR output directory.
 3. List existing ADRs in the output directory to show context.
 
 ## Required reading
@@ -81,7 +81,7 @@ You ARE the adr-scribe for this phase. Read and embody the agent definition at
 
 ## Producing the ADR
 
-1. Get the next ADR number: run `compass-tools.sh adr next-number`.
+1. Get the next ADR number: run `~/.claude/compass/scripts/compass-tools.sh adr next-number`.
 2. Write the ADR using the template at `~/.claude/compass/templates/ADR.md`.
 3. Place it in the configured ADR directory (from `config.yaml`).
 4. Present the ADR to the user for review before finalizing.
@@ -90,7 +90,7 @@ The ADR filename format: `ADR-{NNN}-{kebab-case-title}.md`
 
 ## Closing
 
-1. Run `compass-tools.sh session update` to record progress.
+1. Run `~/.claude/compass/scripts/compass-tools.sh session update` to record progress.
 2. Show the ADR summary.
 3. Ask:
    ```

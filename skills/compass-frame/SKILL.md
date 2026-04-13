@@ -10,7 +10,7 @@ exists, and what constraints shape it.
 
 ## Pre-flight
 
-1. Run `compass-tools.sh preflight frame` to verify:
+1. Run `~/.claude/compass/scripts/compass-tools.sh preflight frame` to verify:
    - `.compass/config.yaml` exists (if not, suggest `/compass:init` first)
 2. Check if `.compass/FRAMING.md` already exists.
    - If yes: inform the user. Ask if they want to revise or start fresh.
@@ -99,7 +99,7 @@ If yes, collect the principles through conversation. Then append them to
 
 After FRAMING.md and constitution are written:
 
-1. Run `compass-tools.sh session update` to record progress.
+1. Run `~/.claude/compass/scripts/compass-tools.sh session update` to record progress.
 2. Show summary of what was produced.
 3. Suggest: "Framing complete. Next step: `/compass:research` to investigate domain topics."
 4. Suggest `/clear` before the next phase.

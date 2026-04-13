@@ -96,7 +96,7 @@ COMPASS externalizes all state to `.compass/` in the target project:
 ```
 
 State files are the source of truth — not conversation history. All state mutations
-go through `compass-tools.sh` (deterministic, no LLM involved).
+go through `~/.claude/compass/scripts/compass-tools.sh` (deterministic, no LLM involved).
 
 ---
 

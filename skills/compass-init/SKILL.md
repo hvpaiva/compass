@@ -117,7 +117,7 @@ options: ["Yes — version all COMPASS artifacts", "No — add .compass/ to .git
 
 ## Step 4 — Scaffold .compass/ directory
 
-Run `compass-tools.sh init <project-root>` with the resolved config values.
+Run `~/.claude/compass/scripts/compass-tools.sh init <project-root>` with the resolved config values.
 
 This creates:
 ```
@@ -133,7 +133,7 @@ This creates:
 
 ## Step 5 — Confirm and suggest next step
 
-1. Run `compass-tools.sh session update` to record progress.
+1. Run `~/.claude/compass/scripts/compass-tools.sh session update` to record progress.
 2. Show the user:
    - Summary of configuration choices
    - Directory structure created

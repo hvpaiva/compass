@@ -10,7 +10,7 @@ every artifact, and (in build phase) every work unit.
 
 ## Execution
 
-1. Run `compass-tools.sh status --json` for structured state data.
+1. Run `~/.claude/compass/scripts/compass-tools.sh status --json` for structured state data.
 2. Read `.compass/config.yaml` for configuration context.
 3. Scan all `.compass/` artifacts.
 
@@ -76,4 +76,4 @@ Stopped at: {from SESSION.md}
 - This is a read-only panorama. No artifacts produced, no state modified.
 - Heavier than `/compass:next` — reads more files for the complete picture.
 - Useful for orientation after a long break or context clear.
-- Run `compass-tools.sh session update` is NOT called — this is read-only.
+- Run `~/.claude/compass/scripts/compass-tools.sh session update` is NOT called — this is read-only.

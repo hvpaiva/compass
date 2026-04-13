@@ -14,7 +14,7 @@ from the automatic hook.
 
 ## Pre-flight
 
-1. Run `compass-tools.sh preflight build-scope` to verify:
+1. Run `~/.claude/compass/scripts/compass-tools.sh preflight build-scope` to verify:
    - `.compass/SPEC.md` (or configured path) exists
    - At least one ADR exists
 2. If `$ARGUMENTS` provided, use as git ref (e.g., `HEAD~3`, a branch name, a commit hash).
@@ -28,9 +28,9 @@ from the automatic hook.
 
 ## Execution
 
-1. Run `compass-tools.sh drift --json` to get structured diff data.
+1. Run `~/.claude/compass/scripts/compass-tools.sh drift --json` to get structured diff data.
    If a git ref was provided, run `git diff {ref} -- . ':!.compass/'` first and
-   pipe to a temp file, then `compass-tools.sh drift <tempfile> --json`.
+   pipe to a temp file, then `~/.claude/compass/scripts/compass-tools.sh drift <tempfile> --json`.
 
 2. Spawn the `scope-guardian` agent:
 
@@ -64,4 +64,4 @@ Agent(
 
 ## Post-execution
 
-Present the full drift report to the user. Run `compass-tools.sh session update`.
+Present the full drift report to the user. Run `~/.claude/compass/scripts/compass-tools.sh session update`.
