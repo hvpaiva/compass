@@ -1,6 +1,6 @@
 {
   "name": "compass-cc",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "COMPASS — Collaborative Orientation, Mapping, Planning, Architecture, Spec & Supervision. An inverted AI coding skill: the human implements, the LLM orients.",
   "license": "MIT",
   "author": "hvpaiva",
